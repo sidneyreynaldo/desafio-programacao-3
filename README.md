@@ -25,5 +25,5 @@ $ bundle
 Em seguida, para rodar os testes, use:
 
 ```
-$ bundle exec rspec spec/email_validator_spec.rb
+$ bundle exec rspec spec/email_validator_spec.rb --format documentation
 ```

@@ -6,6 +6,9 @@ describe EmailValidator, '.valid?' do
   it "should return true when given 1 valid email" do
     described_class.valid?('foo@exemplo.com').should be_true
   end
+  it "should return true when given 1 valid email" do
+    described_class.valid?('foo_bar@exemplo.com').should be_true
+  end
   it "should return true when given 1 valid email with extra spaces" do
     described_class.valid?(' foo@exemplo.com').should be_true
   end
