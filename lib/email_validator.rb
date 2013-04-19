@@ -11,20 +11,18 @@ class EmailValidator
 
 
     # Separando os emails quando passado mais de 1.
-    emails_separado = emails.split(',')
+    emails_split = emails.split(',')
 
-    teste_regex = true
+    regex_test = true
 
-    emails_separado.each do |email|
-      if teste_regex == true
-        teste_regex = (email.gsub(' ', '') =~ VALID_EMAIL_REGEX) == 0
+    emails_split.each do |email|
+      if regex_test == true
+        regex_test = (email.strip =~ VALID_EMAIL_REGEX) == 0
       end
     end
 
-    return teste_regex
+    return regex_test
 
-    # Testando REGEX
-    #emails =~ VALID_EMAIL_REGEX
   end
 
 end
